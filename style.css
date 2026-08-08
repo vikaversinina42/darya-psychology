@@ -402,6 +402,7 @@ body {
     flex-direction: column;
 }
 
+
 /* Верхняя строка внутри карточки (заголовок + стрелка) */
 .step-header {
     display: flex;
