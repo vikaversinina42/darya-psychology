@@ -1,0 +1,931 @@
+/* Базовые сбросы */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #f4f6f8;
+    color: #2b2b2b;
+    padding: 40px 0; /* Отступы сверху и снизу страницы */
+}
+
+/* ==========================================
+   ГЛАВНЫЙ КОНТЕЙНЕР (ЦЕНТРИРОВАНИЕ ВСЕГО САЙТА)
+   ========================================== */
+.container {
+    width: 1000px;
+    margin: 0 auto; /* ДЕРЖИТ ВЕСЬ КОНТЕНТ СТРОГО ПО ЦЕНТРУ ЭКРАНА */
+}
+
+/* ==========================================
+   1. ШАПКА
+   ========================================== */
+.header {
+    margin-bottom: 50px; /* Расстояние между шапкой и хиро-блоком — ровно 50px */
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Пробелы между кнопками по 20px */
+    width: 1000px;
+}
+
+.header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Точные размеры по твоему ТЗ: */
+    width: 235px; /* (1000px - 60px отступов) / 4 кнопки */
+    height: 42px;
+    
+    border: 1px solid #EC8268;
+    border-radius: 20px; /* Закругление 20px */
+    
+    background-color: transparent;
+    color: #2b2b2b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    
+    /* Анимация 0.2 сек */
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Ховер для первых 3 кнопок (цвет FFD4BA) */
+.header-btn:nth-child(-n+3):hover {
+    background-color: #FFD4BA;
+}
+
+/* 4-я кнопка ("Записаться") — цвет EC8268 по умолчанию, C95C4B на ховере */
+.header-btn:nth-child(4) {
+    background-color: #EC8268;
+    color: #ffffff;
+}
+
+.header-btn:nth-child(4):hover {
+    background-color: #C95C4B;
+    border-color: #C95C4B;
+}
+
+/* ==========================================
+   2. HERO SECTION
+   ========================================== */
+.hero-section {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Растягивает обе колонки на одинаковую высоту */
+    gap: 40px;
+}
+.hero-content {
+    width: 460px;
+    display: flex;
+    flex-direction: column; /* Элементы идут сверху вниз */
+    align-items: flex-start; /* Выравнивание элементов по левому краю */
+}
+
+/* Заголовок */
+.hero-title {
+    font-family: 'Inglobal', Georgia, serif;
+    font-size: 32px;
+    color: #8c2815;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+/* Текст под заголовком */
+.hero-text {
+    font-weight: 300; /* Light 16px */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+}
+
+/* Тэги */
+.hero-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 32px;
+    border-color: #9DC2FF
+}
+
+.tag-item {
+    padding: 8px 16px;
+    border: 1px solid #cce0f5;
+    border-radius: 20px;
+    background-color: #eaf2fb00;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ==========================================
+   3. КНОПКА actionbtn (ДУБЛИРУЕМАЯ)
+   ========================================== */
+.actionbtn {
+    margin-top: auto; /* ВЫТАЛКИВАЕТ КНОПКУ В САМЫЙ НИЗ КОЛОНКИ! */
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    
+    background-color: #EC8268;
+    color: #ffffff;
+    text-decoration: none;
+    
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.2;
+    
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.actionbtn:hover {
+    background-color: #C95C4B;
+    transform: scale(1.03);
+}
+
+/* ==========================================
+   4. БЛОК С ФОТОГРАФИЕЙ
+   ========================================== */
+.hero-image-wrapper {
+    width: 500px; /* Правая колонка с фото */
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    object-fit: cover;
+}
+.quote-section {
+    position: relative; /* Чтобы кавычки легко позиционировались относительно текста */
+    width: 681px;
+    margin: 160px auto 160px auto; /* 191px сверху от фото, центрирование по горизонтали */
+    text-align: center;
+
+}
+
+/* Сам текст цитаты */
+.quote-text {
+    font-family: 'Inglobal', Georgia, serif;
+    font-size: 32px;
+    font-weight: 400; /* Regular */
+    line-height: 1.15; /* Высота под 74px на две строки */
+    color: #8c2815; /* Тот же глубокий терракотовый цвет */
+}
+
+/* Общие размеры кавычек */
+.quote-icon {
+    position: absolute;
+    width: 28px;
+    height: 25px;
+}
+
+/* Левая кавычка: слева снаружи текста на 10px, поджата к верхнему краю */
+.quote-left {
+    top: -5px;
+    right: 100%; /* Выносит кавычку влево за пределы ширины 681px */
+    margin-right: 10px; /* Отступ 10px до текста */
+}
+
+/* Правая кавычка: справа снаружи текста на 10px, поджата к нижнему краю */
+.quote-right {
+    bottom: -5px;
+    left: 100%; /* Выносит кавычку вправо за пределы текста */
+    margin-left: 10px; /* Отступ 10px до текста */
+}
+
+.requests-section {
+    width: 1000px;
+    height: 324px;
+    margin: auto auto 0 auto; /* Центрирование цельного блока */
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    justify-content: space-between; /* Левый и правый блок по краям (внутри будет 104px) */
+}
+
+/* --- Левая колонка (407px шириной) --- */
+.requests-content {
+    position: relative; /* Для позиционирования декора */
+    width: 407px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Декоративный вектор */
+.requests-decor {
+    position: absolute;
+    width: 288px;
+    height: 96px;
+    top: -70px; /* Выносим вверх за пределы заголовка */
+    left: -40px; /* Сдвигаем немного влево */
+    object-fit: contain;
+
+    
+    /* Поворот на 170 градусов */
+    transform: rotate(0eg);
+    
+    z-index: -1; /* Чтобы вектор был ЗА текстом заголовка */
+}
+
+/* Заголовок (Inglobal 32) */
+.requests-title {
+    font-family: 'Inglobal', Georgia, serif;
+    font-size: 32px;
+    color: #8c2815;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    height: 74px;
+    margin-bottom: 16px; /* Отступ до подзаголовка */
+}
+
+/* Подзаголовок (Manrope Regular 14) */
+.requests-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400; /* Regular */
+    line-height: 1.35; /* Высота под 38px */
+    color: #4a4a4a;
+    width: 407px;
+    height: 38px;
+    /* margin-bottom пока не ставим, используем класс для кнопки */
+}
+
+/* Модификатор отступа для дублируемой кнопки действия */
+.requests-btn {
+    margin-top: 56px; /* Точный отступ от подзаголовка */
+}
+
+/* --- Правая колонка (список) --- */
+.requests-list {
+    width: 490px;
+    height: 324px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Расстояние между прямоугольниками */
+}
+
+/* Сами прямоугольники с текстом */
+.request-item {
+    width: 490px;
+    height: 75px; /* (324px - 24px гэпов) / 4 */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирование текста внутри */
+    
+    background-color: #F9ECE3; /* Цвет по умолчанию */
+    color: #2b2b2b;
+    border-radius: 16px; /* Скругление */
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    
+    /* Плавная анимация ховера */
+    transition: background-color 0.2s ease;
+    cursor: default; /* Обычный курсор при наведении, т.к. это не ссылка */
+}
+
+/* Ховер анимация: замена цвета на FFD4BA */
+.request-item:hover {
+    background-color: #FFD4BA;
+}
+
+.section-title {
+    font-family: 'Inglobal', Georgia, serif;
+    font-size: 32px;
+    font-weight: 700; /* Regular */
+    color: #8c2815;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-section {
+    width: 1000px;
+    margin: 160px auto; /* 160px сверху и снизу, центрирование по бокам */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем и заголовок, и контент */
+}
+
+/* Обертка для текста и декоративных векторов */
+.about-content {
+    position: relative; /* Чтобы декор позиционировался относительно этого блока */
+    width: 492px;
+    margin-top: 16px; /* Отступ 16px от заголовка до текста */
+}
+
+/* Контейнер для трех абзацев */
+.about-text-block {
+    width: 492px;
+    min-height: 188px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Промежуток между абзацами ровно 6px! */
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px; /* Подбери точный размер если 14-16px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: #2b2b2b;
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* --- Декоративные векторы (162 на 54) --- */
+.about-decor {
+    position: absolute;
+    width: 162px;
+    height: 54px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Верхний правый декор */
+.about-decor-top {
+    top: -20%;
+    left: 90%; /* Выносим вправо за пределы 492px */
+    margin-left: -30px; /* Чуть наплывает на угол для красивой посадки */
+}
+
+/* Нижний левый декор (диагонально) */
+.about-decor-bottom {
+    bottom: -20px;
+    right: 90%; /* Выносим влево за пределы 492px */
+    margin-right: -30px;
+}/* =====================================
+
+/* ==========================================
+   8. СЕКЦИЯ ЭТАПОВ РАБОТЫ
+   ========================================== */
+
+.steps-section {
+    width: 1000px;
+    margin: 160px auto 0 auto; /* Отступ сверху от предыдущего блока */
+}
+
+.steps-title {
+    margin-bottom: 16px; /* Отступ 16px от заголовка до блока с карточками */
+}
+
+/* Контейнер для карточек (Grid с точными параметрами) */
+.steps-grid {
+    width: 1000px;
+    display: flex;
+    gap: 20px; /* Отступы по 20px между карточками */
+}
+
+/* Сама оранжевая карточка */
+.step-card {
+    width: 235px;
+    height: 123px;
+    background-color: #F9ECE3;
+    border-radius: 16px;
+    padding: 16px; /* Внутренние отступы, чтобы текст не лип к краям */
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* Верхняя строка внутри карточки (заголовок + стрелка) */
+.step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px; /* Отступ 8px до текста описания */
+}
+
+/* Заголовок этапа (Manrope 20 Medium) */
+.step-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500; /* Medium */
+    color: #802B1E;
+    line-height: 1.2;
+}
+
+/* Иконка стрелочки */
+.step-arrow {
+    width: 18px;
+    height: auto;
+}
+
+/* Текст описания (Manrope 12 Regular) */
+.step-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 400; /* Regular */
+    line-height: 1.35;
+    color: #342C2B;
+}
+/* ==========================================
+   9. СЕКЦИЯ УСЛУГ
+   ========================================== */
+
+.services-section {
+    width: 1000px;
+    margin: 160px auto 0 auto;
+}
+
+/* Обертка заголовка с местом под декор */
+.services-header {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.services-title {
+    text-align: left; /* В отличие от обычного H2, здесь заголовок слева */
+}
+
+/* Декоративный вектор над заголовком */
+.services-decor {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: -45px;
+    left: -20px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Сетка карточек (1000px шириной) */
+.services-grid {
+    width: 1000px;
+    display: flex;
+    gap: 20px; /* Отступ 20px между карточками */
+}
+
+/* Карточка услуги (320px на 360px) */
+.service-card {
+    width: 320px;
+    height: 360px;
+    background-color: #F9ECE3;
+    border-radius: 20px;
+    padding: 24px;
+    box-sizing: border-box; /* Чтобы padding не увеличивал внешние размеры 320x360 */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Внутренний заголовок карточки (блоком высотой 55px) */
+.service-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500; /* Medium */
+    color: #8c2815;
+    line-height: 1.2;
+    
+    width: 100%;
+    height: 55px; /* Фиксированный блок 55px */
+    margin-bottom: 8px; /* Отступ 8px до описания */
+}
+
+/* Текст описания */
+.service-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 400; /* Regular */
+    line-height: 1.4;
+    color: #4a4a4a;
+    margin-bottom: 16px; /* Отступ 16px до бейджа с ценой */
+}
+
+/* Плюшка/бейдж с ценой */
+.service-price {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b2b2b;
+    
+    padding: 8px 16px;
+    border: 1px solid #9DC2FF; /* Голубая обводка как на макете */
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+/* Модификатор для круглой кнопки actionbtn */
+.service-btn {
+    margin-top: auto; /* Авто-выталкивание кнопки в самый низ карточки */
+}
+
+/* ==========================================
+   10. СЕКЦИЯ ЗАПИСИ (ФОРМА)
+   ========================================== */
+
+.booking-section {
+    width: 1000px;
+    margin: 160px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* --- Левая колонка с заголовком --- */
+.booking-header {
+    position: relative;
+    width: 300px;
+}
+
+.booking-title {
+    text-align: left;
+}
+
+.booking-decor {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    top: -50px;
+    left: -20px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Правая колонка с формой (660px) --- */
+.booking-form {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Подписи "Выберите:" и "Введите:" (Manrope ExtraLight 11) */
+.form-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 200; /* Extra Light */
+    color: #4a4a4a;
+}
+
+/* Ряд из двух полей ввода */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.select-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+/* Базовые стили полей ввода (инпуты и селекты) */
+.form-input {
+    width: 100%;
+    height: 52px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    background-color: transparent;
+    border: 1px solid #1a1a1a; /* Чёрная четкая обводка как на макете */
+    border-radius: 16px;
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #2b2b2b;
+    outline: none;
+    
+    transition: border-color 0.2s ease;
+}
+
+.form-input::placeholder {
+    color: #757575;
+}
+
+.form-input:focus {
+    border-color: #EC8268; /* Цвет акцента при фокусе */
+}
+
+/* Стилизация выпадающих списков select */
+.form-select {
+    appearance: none; /* Убираем стандартную стрелку браузера */
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/* Собственная аккуратная галочка-стрелочка справа */
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 6px;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%3C%231A1A1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+}
+
+/* --- Широкая кнопка отправки (660px на 63px) --- */
+.booking-submit-btn {
+    width: 660px;
+    height: 63px;
+    margin-top: 8px;
+    
+    background-color: #EC8268;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.booking-submit-btn:hover {
+    background-color: #d96f56;
+}
+
+.booking-submit-btn:active {
+    transform: scale(0.99);
+}
+
+/* ==========================================
+   11. СЕКЦИЯ FAQ
+   ========================================== */
+
+.faq-section {
+    width: 1000px;
+    margin: 160px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Левый заголовок */
+.faq-header {
+    width: 320px;
+}
+
+.faq-title {
+    text-align: left;
+}
+
+/* Правый список карточек */
+.faq-list {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Элемент плашки FAQ */
+.faq-item {
+    background-color: #F9ECE3;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+}
+
+/* Ховер для плашек FAQ: с заменой цвета на FFD4BA */
+.faq-item:hover {
+    background-color: #FFD4BA;
+}
+
+/* Заголовок плашки (нажимаемая область) */
+.faq-summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    list-style: none; /* Убираем стандартную стрелочку браузера */
+}
+
+/* Скрываем стандартный маркер summary для Webkit браузеров */
+.faq-summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Иконка со стрелкой (30 на 30) */
+.faq-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Поворачиваем стрелочку при открытии ответа */
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Текст вопроса внутри summary */
+.faq-summary,
+.faq-text {
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 14px !important; /* Твой нужный размер */
+    font-weight: 600;
+    color: #2b2b2b;
+    line-height: 1.3;
+}
+
+/* Выпадающий текст ответа */
+.faq-answer {
+    padding: 0 20px 20px 66px; /* Отступ слева под размер иконки */
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #4a4a4a;
+}
+
+
+/* ==========================================
+   ДОРАБОТКА ХОВЕРА ДЛЯ "КАК ПРОХОДИТ РАБОТА"
+   ========================================== */
+
+.step-card {
+    transition: background-color 0.2s ease; /* Добавляем плавность */
+}
+
+/* Добавляем ховер с заменой цвета на FFD4BA для карточек этапов */
+.step-card:hover {
+    background-color: #FFD4BA;
+}
+
+/* ==========================================
+   12. СЕКЦИЯ КОНТАКТОВ
+   ========================================== */
+
+.contacts-section {
+    width: 1000px;
+    margin: 160px auto; /* 160px сверху и снизу для финального блока */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* --- Левая колонка --- */
+.contacts-left {
+    width: 300px;
+}
+
+.contacts-header {
+    position: relative;
+    margin-bottom: 16px;
+    white-space: nowrap;
+}
+
+.contacts-title {
+    text-align: left;
+    line-height: 1.15;
+}
+
+.contacts-decor {
+    position: absolute;
+    width: 220px;
+    height: auto;
+    top: -45px;
+    left: -20px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.contacts-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #4a4a4a;
+}
+
+/* --- Правая колонка (660px) --- */
+.contacts-right {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Форма в одну строку */
+.contacts-form {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.contacts-input {
+    height: 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    background-color: #F4F6F6; /* Светлый фон инпута */
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    color: #2b2b2b;
+    outline: none;
+}
+
+.contacts-input::placeholder {
+    color: #757575;
+}
+
+/* Ширина отдельных инпутов */
+.input-name {
+    width: 200px;
+}
+
+.input-phone {
+    flex: 1; /* Занимает оставшееся место */
+}
+
+/* Кнопка "Заказать звонок" */
+.contacts-btn {
+    width: 180px;
+    height: 60px;
+    background-color: #EC8268;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.contacts-btn:hover {
+    background-color: #d96f56;
+}
+
+.contacts-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- Блок мессенджеров --- */
+.contacts-socials {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.social-card {
+    flex: 1;
+    height: 64px;
+    background-color: #F9ECE3;
+    border-radius: 16px;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 12px;
+    
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+/* Ховер для карточек мессенджеров */
+.social-card:hover {
+    background-color: #FFD4BA;
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.social-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+
+.social-tag {
+    font-weight: 400;
+    color: #666666;
+}

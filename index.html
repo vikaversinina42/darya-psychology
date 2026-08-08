@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дарья Безрученко — Психолог</title>
+
+    <!-- Подключаем шрифт Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ЕДИНЫЙ КОНТЕЙНЕР СЕТКИ НА 1000px -->
+    <div class="container">
+
+        <!-- 1. Шапка сайта -->
+        <header class="header">
+            <nav class="header-nav">
+                <a href="#" class="header-btn">Дарья Безрученко</a>
+                <a href="#" class="header-btn">Обо мне</a>
+                <a href="#" class="header-btn">Услуги</a>
+                <a href="#" class="header-btn">Записаться</a>
+            </nav>
+        </header>
+
+        <!-- 2. Секция Hero -->
+        <main class="hero-section">
+            
+            <!-- Левый блок с текстом -->
+            <div class="hero-content">
+                <h1 class="hero-title">Ваш бережный наставник</h1>
+                <p class="hero-text">
+                    Индивидуальные консультации и системная работа с выгоранием от психолога Дарьи Безрученко
+                </p>
+
+                <!-- Тэги/Плашки -->
+                <div class="hero-tags">
+                    <span class="tag-item">Свежий взгляд</span>
+                    <span class="tag-item">100% интерес</span>
+                    <span class="tag-item">Личный опыт</span>
+                </div>
+
+                <!-- Круглая кнопка -->
+                <a href="#" class="actionbtn">
+                    Личная<br>консультация
+                </a>
+            </div>
+
+            <!-- Правый блок с фото -->
+            <div class="hero-image-wrapper">
+                <img src="images/hero-photo.png" alt="Дарья Безрученко" class="hero-img">
+            </div>
+
+        </main>
+
+        <section class="quote-section">
+    <!-- Открывающая кавычка -->
+    <img src="images/quote-left.svg" alt="" class="quote-icon quote-left">
+    
+    <!-- Текст цитаты -->
+    <p class="quote-text">
+        Я верю, что терапия — это не про поучения, а про безопасное пространство, где вас слышат
+    </p>
+    
+    <!-- Закрывающая кавычка -->
+    <img src="images/quote-right.svg" alt="" class="quote-icon quote-right">
+</section>
+    </div>
+
+
+<!-- 4. Секция: С какими запросами приходят -->
+<section class="requests-section">
+    <!-- Левый блок с текстом и декором -->
+    <div class="requests-content">
+        <!-- Декоративный вектор (повернутый) -->
+        <img src="images/decor-requests.png" alt="" class="requests-decor">
+        
+        <h2 class="section-title requests-title">С какими запросами ко мне приходят?</h2>
+        
+        <p class="requests-text">
+            Бережная психологическая помощь в формате онлайн или очно в уютном кабинете
+        </p>
+        
+        <!-- Наша дублируемая круглая кнопка действия -->
+        <a href="#" class="actionbtn requests-btn">Записаться</a>
+    </div>
+
+    <!-- Правый блок: список запросов -->
+    <div class="requests-list">
+        <div class="request-item">Поиск себя и потеря ориентиров</div>
+        <div class="request-item">Сложные отношения с близкими</div>
+        <div class="request-item">Проблемы с самооценкой</div>
+        <div class="request-item">Тревожность, выгорание на работе</div>
+    </div>
+</section>
+
+<section class="about-section">
+    
+    <!-- Универсальный заголовок -->
+    <h2 class="section-title">Обо мне</h2>
+
+    <!-- Обертка для текста и декора (492px по центру) -->
+    <div class="about-content">
+        <!-- Декор 1: Сверху справа -->
+        <img src="images/about-decor-top.png" alt="" class="about-decor about-decor-top">
+
+        <!-- Текстовый блок (абзацы с гэпом 6px через Flexbox) -->
+        <div class="about-text-block">
+            <p>
+                Я пришла в психологию через собственную трансформацию. 
+                На личном опыте знаю, как истощают токсичные отношения, 
+                манипуляции и "эмоциональные качели".
+            </p>
+            <p>
+                Я прошла этот путь, научилась выстраивать жесткие границы и 
+                вернула себе право на собственную жизнь.
+            </p>
+            <p>
+                Сегодня мой опыт помогает клиентам выходить из 
+                разрушительных сценариев, сохранять свою энергию и 
+                обретать твердую опору внутри себя
+            </p>
+        </div>
+
+        <!-- Декор 2: Снизу слева (диагонально) -->
+        <img src="images/about-decor-bottom.png" alt="" class="about-decor about-decor-bottom">
+    </div>
+
+</section>
+
+<!-- 6. Секция: Как проходит работа (Этапы) -->
+<section class="steps-section">
+    
+    <!-- Главный заголовок H1 (или наш унифицированный section-title) -->
+    <h1 class="section-title steps-title">Как проходит сеанс</h1>
+
+    <!-- Контейнер для 4 карточек -->
+    <div class="steps-grid">
+        
+        <!-- Карточка 1 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h2 class="step-title">Знакомство</h2>
+                <img src="images/step-arrow.svg" alt="" class="step-arrow">
+            </div>
+            <p class="step-text">Вы оставляете заявку на сайте или по номеру телефона</p>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h2 class="step-title">Анализ</h2>
+                <img src="images/step-arrow.svg" alt="" class="step-arrow">
+            </div>
+            <p class="step-text">Знакомимся и разбираем то, что вас волнует. Формулируем четкий запрос и план работы.</p>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h2 class="step-title">Терапия</h2>
+                <img src="images/step-arrow.svg" alt="" class="step-arrow">
+            </div>
+            <p class="step-text">Бережно разбираем причины проблем и находим решения для реальной жизни.</p>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="step-card">
+            <div class="step-header">
+                <h2 class="step-title">Результат</h2>
+                <img src="images/step-arrow.svg" alt="" class="step-arrow">
+            </div>
+            <p class="step-text">Подводим итоги. Вы получаете поддержку и спокойствие</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 7. Секция: Услуги -->
+<section class="services-section">
+    
+    <!-- Заголовок с вектором -->
+    <div class="services-header">
+        <img src="images/decor-requests.png" alt="" class="services-decor">
+        <h2 class="section-title services-title">Услуги</h2>
+    </div>
+
+    <!-- Контейнер для 3 карточек -->
+    <div class="services-grid">
+        
+        <!-- Карточка 1 -->
+        <div class="service-card">
+            <h3 class="service-title">Быстрое знакомство онлайн</h3>
+            <p class="service-text">
+                Короткий созвон в Zoom. Познакомимся, и поймем, комфортно ли вам работать со мной
+            </p>
+            <div class="service-price">0 ₽ / 15 минут</div>
+            <a href="#" class="actionbtn service-btn">Записаться</a>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="service-card">
+            <h3 class="service-title">Индивидуальная сессия (Онлайн)</h3>
+            <p class="service-text">
+                Полноценная глубокая работа с вашей проблемой через Zoom или Google Meet
+            </p>
+            <div class="service-price">2 000 ₽ / 50 минут</div>
+            <a href="#" class="actionbtn service-btn">Записаться</a>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="service-card">
+            <h3 class="service-title">Очная консультация в Челябинске</h3>
+            <p class="service-text">
+                Встреча в уютном и тихом кабинете в центре города
+            </p>
+            <div class="service-price">2 500 ₽ / 50 минут</div>
+            <a href="#" class="actionbtn service-btn">Записаться</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 8. Секция: Запись на сеанс -->
+<section class="booking-section">
+    
+    <!-- Левая колонка: Заголовок и декор -->
+    <div class="booking-header">
+        <img src="images/decor-requests.png" alt="" class="booking-decor">
+        <h2 class="section-title booking-title">Запись на сеанс</h2>
+    </div>
+
+    <!-- Правая колонка: Форма записи (660px) -->
+    <form class="booking-form">
+        
+        <!-- Блок 1: Выберите -->
+        <div class="form-group">
+            <label class="form-label">Выберите:</label>
+            <div class="form-row">
+                <div class="select-wrapper">
+                    <select class="form-input form-select" required>
+                        <option value="" disabled selected hidden>Услугу</option>
+                        <option value="1">Быстрое знакомство онлайн</option>
+                        <option value="2">Индивидуальная сессия (Онлайн)</option>
+                        <option value="3">Очная консультация в Челябинске</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <select class="form-input form-select" required>
+                        <option value="" disabled selected hidden>Дату и время</option>
+                        <option value="1">Ближайшее время</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Блок 2: Введите -->
+        <div class="form-group">
+            <label class="form-label">Введите:</label>
+            <div class="form-row">
+                <input type="text" class="form-input" placeholder="Ваше имя" required>
+                <input type="text" class="form-input" placeholder="Телефон / эл. почта" required>
+            </div>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <button type="submit" class="booking-submit-btn">Записаться</button>
+
+    </form>
+
+</section>
+
+<!-- 9. Секция: Часто задаваемые вопросы -->
+<section class="faq-section">
+    
+    <!-- Левая колонка с заголовком -->
+    <div class="faq-header">
+        <h2 class="section-title faq-title">Часто задаваемые вопросы</h2>
+    </div>
+
+    <!-- Правая колонка с плашками (660px) -->
+    <div class="faq-list">
+        
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <img src="images/faq-arrow.svg" alt="" class="faq-icon">
+                <span class="faq-question">Что произойдет, если время сессии закончится, а мы не успеем договорить?</span>
+            </summary>
+            <div class="faq-answer">
+                Мы бережно подведем итоги встречи и наметим точки для следующей сессии, чтобы вы ушли с чувством завершенности.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <img src="images/faq-arrow.svg" alt="" class="faq-icon">
+                <span class="faq-question">Гарантируется ли конфиденциальность?</span>
+            </summary>
+            <div class="faq-answer">
+                Да, абсолютная конфиденциальность — это главный этический принцип моей работы. Всё сказанное остается строго между нами.
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-summary">
+                <img src="images/faq-arrow.svg" alt="" class="faq-icon">
+                <span class="faq-question">Как подготовиться к первой встрече?</span>
+            </summary>
+            <div class="faq-answer">
+                Специальной подготовки не требуется. Главное — сформировать запрос или хотя бы рассказать о том, что вас сейчас беспокоит.
+            </div>
+        </details>
+
+    </div>
+
+</section>
+
+<!-- 10. Секция: Контакты / Обратная связь -->
+<section class="contacts-section">
+    
+    <!-- Левая колонка с заголовком, декором и текстом -->
+    <div class="contacts-left">
+        <div class="contacts-header">
+            <img src="images/decor-requests.png" alt="" class="contacts-decor">
+            <h2 class="section-title contacts-title">
+                Остались вопросы?<br>Свяжитесь со мной!
+            </h2>
+        </div>
+        <p class="contacts-desc">
+            Если вы не нашли ответ на свой вопрос или сомневаетесь, подойдет ли мой метод под вашу ситуацию — просто напишите мне.<br>
+            Это бесплатно и ни к чему вас не обязывает.
+        </p>
+    </div>
+
+    <!-- Правая колонка с формой и соцсетями (660px) -->
+    <div class="contacts-right">
+        
+        <!-- Форма обратного звонка -->
+        <form class="contacts-form">
+            <input type="text" class="contacts-input input-name" placeholder="Ваше имя" required>
+            <input type="text" class="contacts-input input-phone" placeholder="Ваш номер телефона или почта" required>
+            <button type="submit" class="contacts-btn">Заказать звонок</button>
+        </form>
+
+        <!-- Кнопки мессенджеров -->
+        <div class="contacts-socials">
+            
+            <a href="https://t.me/dariapsychol" target="_blank" class="social-card">
+                <img src="images/tg-icon.svg" alt="Telegram" class="social-icon">
+                <span class="social-text">
+                    Написать в Telegram <span class="social-tag">(@dariapsychol)</span>
+                </span>
+            </a>
+
+            <a href="#" target="_blank" class="social-card">
+                <img src="images/vk-icon.svg" alt="ВКонтакте" class="social-icon">
+                <span class="social-text">Написать в ВКонтакте</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
